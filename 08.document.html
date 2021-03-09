@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ID, Class, Tag의 우선순위</title>
+	<style>
+		.wrapper {border: 2px solid red;}
+		.logo {border: 2px solid darkgreen;}
+		h1 {color: darkorange; background-color: deepskyblue;}
+		h1.logo {color: red;}
+		h2.logo {color: green;}
+		.navi-wrap {background-color: gainsboro;}
+		.navi-wrap.main-navi {border: 2px solid deeppink;}
+		.navi-wrap.port-navi {border: 2px solid deepskyblue;}
+		.navi-wrap > .navi {color: green;}
+		.main-navi .navi {border: 2px solid red;}
+		.port-navi .navi {border: 2px solid blue;}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<h1 class="logo">LOGO</h1>
+		<ul class="navi-wrap main-navi" id="mainNavi">
+			<li class="navi">HOME</li>
+			<li class="navi">ABOUT</li>
+			<li class="navi">PORTFOLIO</li>
+			<li class="navi">CONTACT</li>
+			<li>
+				<div class="navi">테스트</div>
+			</li>
+		</ul>
+		<!-- ul.navi-wrap>li.navi*3 -->
+		<ul class="navi-wrap port-navi" id="portNavi">
+			<li class="navi">PUBLISHING</li>
+			<li class="navi">FRONT-END</li>
+			<li class="navi">BACK_END</li>
+		</ul>
+		<h2 class="logo">LOGO</h2>
+		<h1>LOGO</h1>
+	</div>
+</body>
+</html>
